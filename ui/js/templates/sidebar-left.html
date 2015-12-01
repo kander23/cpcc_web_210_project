@@ -1,0 +1,8 @@
+<% _.each(rows, function(row, idx){  %>
+       <% var param_row_class = ((_.isString(row.class))?row.class:'');  %>
+       <% var auto_row_class = 'rownum_'+idx; %>
+       <% var row_name = ((_.isString(row.name))?'data-row-name="'+row.name+'"':'');  %>
+       <div class="row <%= param_row_class %> <%= auto_row_class %>" <%= row_name %> >
+
+       </div>
+<% });  %>

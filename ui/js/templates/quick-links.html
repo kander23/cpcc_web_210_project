@@ -1,0 +1,34 @@
+<div class="col-xs-12 quick-links-container" >
+    <div id="section-links">
+        <% if (_.isArray(obj.links) && obj.links.length ){ %>
+            <h3 class="hs">Sections</h3>
+
+            <ul class="nav">
+                <% _.each(obj.links, function(link){ %>
+
+                    <% if (_.has(link, 'sections') && _.isArray(link.sections)){ %>
+                        <% var main_link_class= "section-link"; %>
+                    <% } else { %>
+                        <% var main_link_class= "section-link-childless"; %>
+                    <% } %>
+
+                    <li >
+                        <a class="<%= main_link_class %>" href="#/<%= page %>/<%= link.title.toLowerCase().replace(/ /g, '-') %>"><%= link.title %></a>
+                    </li>
+
+                    <% if (_.has(link, 'sections') && _.isArray(link.sections)){ %>
+                        <% _.each(link.sections, function(title){ %>
+                            <li >
+                                <a class="child-link" href="#/<%= page %>/<%= title.toLowerCase().replace(/ /g, '-') %>"><%= title %></a>
+                            </li>
+                        <% }) %>
+                    <% } %>
+
+
+
+                <% }) %>
+
+            </ul>
+        <% } %>
+    </div>
+</div>

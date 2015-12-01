@@ -1,0 +1,9 @@
+<ul class="nav-small">
+    <%  _.each(links, function(link){ %>
+    <% var url = link.toLowerCase().replace(/ /g,'-'); %>
+    <li  class="<%= obj.link_class %>">
+        <a class="round-corner-4 white-background" href="#/<%= url %>"><%= link %></a>
+    </li>
+    <% }); %>
+
+</ul>

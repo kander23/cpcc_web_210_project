@@ -1,0 +1,102 @@
+<div class="article col-sm-12" data-article-title="<%= obj.title.toLowerCase().replace(/ /g, '-') %>">
+	<div class="row">
+
+        <%  if (_.has(obj, 'title') && _.isString(obj.title) && obj.title.length){ %>
+            <div class="title col-sm-12 text-center sample-1">
+                <h3 class="h3" data-id="<%= obj.title.toLowerCase().replace(/ /g, '-')  %>">
+                        <%= obj.title %>
+                </h3>
+            </div>
+        <% } %>
+		<% var text_hidden_class = (obj.text || obj.sections )? '':'hidden'; %>
+		<% var image_hidden_class = (obj.images && obj.images.length)? '':'hidden'; %>
+		<% var article_width = (obj.images && obj.images.length)? '8':'12'; %>
+
+		<% if (!_.isArray(obj.images)){ %>
+		<%  obj.images = [obj.images];  %>
+		<% } %>
+
+
+		<% if(_.isString(obj.image_pos) && obj.image_pos === 'right'){ %>
+			<!-- images on the right -->
+
+			<div class="col-sm-<%= article_width %> <%= text_hidden_class %> article-text">
+				<% if(_.isString(obj.text)){ %>
+					<p><%= obj.text %></p>
+				<%  } else if (_.isArray(obj.text)){ %>
+					<% _.each(obj.text, function(v, k){   %>
+						<p><%= v %></p>
+					<%  }); %>
+				<%  } else if (_.isArray(obj.sections)){ %>
+					<% _.each(obj.sections, function(v, k){   %>
+						<h4 class="h4" data-section-title="<%= v.heading.toLowerCase().replace(/ /g, '-') %>" ><%= v.heading %></h4>
+						<%   if (_.isArray(v.text)){ %>
+							<% _.each(v.text, function(v, k){   %>
+								<p><%= v %></p>
+							<%  }); %>
+						<% } else { %>
+							<p><%= v.text %></p>
+						<% } %>
+					<%  }); %>
+				<%  } %>
+			</div>
+
+			<% _.each(obj.images, function(img, k){   %>
+				<div class="article-image-wrap col-sm-4 no-border <%= image_hidden_class %> padding-0">
+					<img src="ui/images/<%= img %>" class="" alt="article picture" />
+				</div>
+				<% if (k < (obj.images.length-1)){ %>
+					<div class="spacer">&nbsp;</div>
+				<% } %>
+			<%  }); %>
+
+		<% }else{ %>
+			<!-- images on the left  -->
+			<% _.each(obj.images, function(img, k){   %>
+				<div class="article-image-wrap col-sm-4 no-border <%= image_hidden_class %> padding-0">
+					<img src="ui/images/<%= img %>" class="" alt="article picture" />
+				</div>
+				<% if (k < (obj.images.length-1)){ %>
+					<div class="spacer">&nbsp;</div>
+				<% } %>
+			<%  }); %>
+
+			<div class="col-sm-<%= article_width %> <%= text_hidden_class %> article-text">
+				<% if(_.isString(obj.text)){ %>
+					<p><%= obj.text %></p>
+				<%  } else if (_.isArray(obj.text)){ %>
+					<% _.each(obj.text, function(v, k){   %>
+						<p><%= v %></p>
+					<%  }); %>
+				<%  } else if (_.isArray(obj.sections)){ %>
+					<% _.each(obj.sections, function(v, k){   %>
+						<h4 class="h4" data-section-title="<%= v.heading.toLowerCase().replace(/ /g, '-') %>" ><%= v.heading %></h4>
+						<%   if (_.isArray(v.text)){ %>
+							<% _.each(v.text, function(v, k){   %>
+								<p><%= v %></p>
+							<%  }); %>
+						<% } else { %>
+							<p><%= v.text %></p>
+						<% } %>
+					<%  }); %>
+				<%  } %>
+			</div>
+
+		<% } %>
+
+        <% if(_.has(obj, 'list') && _.isArray(obj.list)){ %>
+            <ul class="padding-left-3">
+                <% _.each(obj.list, function(v, k){   %>
+                    <% if(v.indexOf('.com') >= 0 || v.indexOf('.gov') >= 0 || v.indexOf('.org') >= 0 || v.indexOf('.edu') >= 0){ %>
+                    <% var prefix = ((v.indexOf('@') >= 0)?'mailto:':'http://'); %>
+                        <li>
+                            <a target="_new" href="<%= prefix %><%= v.replace('http://','') %>"><%= v %></a>
+                        </li>
+                    <% }else{ %>
+                        <li><%= v %></li>
+                    <% } %>
+                <%  }); %>
+            </ul>
+        <% } %>
+	</div>
+</div>

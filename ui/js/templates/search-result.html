@@ -1,0 +1,23 @@
+<li data-id="<%= obj.md5 %>">
+    <% if (obj.url.length){ %>
+       <a href="#/<%= obj.url %>">
+    <% } else { %>
+       <a href="javascript:void(0)">
+    <% } %>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="h3 panel-title"><%= obj.title %></h3>
+            </div>
+            <div class="panel-body">
+                <%= obj.text.substring(0,250) %>
+                <% if (obj.text.length ){ %>
+                    &hellip;
+                <% } else { %>
+                    No results found for the search parameter&#58; &#34;<%= obj.search_term %>&#34;
+                <% } %>
+            </div>
+        </div>
+
+    </a>
+
+</li>

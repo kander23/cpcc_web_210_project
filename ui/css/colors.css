@@ -1,0 +1,72 @@
+
+
+.sample-1{
+    background-color: #acc3d4;
+}
+
+.sample-2{
+    background-color: #81abc9;
+}
+.sample-3{
+    background-color: #5987a8;
+}
+.sample-4{
+    background-color: #396b8c;
+}
+.sample-5{
+    background-color: #025692;
+}
+.sample-6{
+     background-color: #09334a;
+ }
+.sample-7{
+    background-color: #00223a;
+}
+.sample-8{
+    background-color: #00070f;
+}
+
+
+.pattern-samples > div{
+    widht: 75px;
+    height: 150px;
+}
+
+.pattern-1{
+    background: url('../images/pattern1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pattern-2{
+    background: url('../images/pattern2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pattern-3{
+    background: url('../images/pattern3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pattern-4{
+    background: url('../images/pattern4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.white-background{
+    background-color: #F5F5F5;
+    color: #0F0F0F;
+}
+
+.white-text{
+	color: #F5F5F5;
+}
+
+.black-background{
+    background-color: #0F0F0F;
+    color: #F5F5F5;
+}
+
+
+

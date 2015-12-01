@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+@import url(https://fonts.googleapis.com/css?family=Sintony:400,700);
+
+
+/*  HTML Elements
+	----------------------------------*/
+	body { 
+		/* Add your font stack here > font-family: Ideal, Alternative, Common, Generic;*/ 
+		font-size:12px;
+		line-height:18px;
+        font-family: Tahoma,Verdana,Segoe,sans-serif;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+	} 
+    
+  /** font stacks http://www.cssfontstack.com */
+	.font-sintony{
+        font-family: 'Sintony', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        
+    }
+    
+    .font-muli{
+        font-family: 'Muli', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+	
+	/** http://stackoverflow.com/questions/6140430/what-are-the-most-common-font-sizes-for-h1-h6-tags */
+    h1, .h1 { font-size: 2em; font-weight: 500; }
+    h2, .h2 { font-size: 1.5em; font-weight: 500; }
+    h3, .h3 { font-size: 1.17em; font-weight: 500; }
+    h4, .h4 { font-size: 1.12em; }
+    h5, .h5 { font-size: .83em; }
+    h6, .h6 { font-size: .67em; }
+   
+
+/* 	font-size for px and em
+	----------------------------------*/
+
+	.px42 { font-size:42px; }
+	.px36 { font-size:36px; }
+	.px30 { font-size:30px; }
+	.px24 { font-size:24px; }
+	.px21 { font-size:21px; }
+	.px18 { font-size:18px; }
+	.px16 { font-size:16px; }
+	.px14 { font-size:14px; }
+	.px13 { font-size:13px; }
+	.px12 { font-size:12px; }
+	.px11 { font-size:11px; }
+	.px10 { font-size:10px; }
+	.px9 { font-size:9px; }
+    
+    .base8px{
+        font-size:8px;
+        line-height:14px;
+    }
+    .base10px{
+        font-size:10px;
+        line-height:16px;
+    }
+    .base12px{
+        font-size:12px;
+        line-height:18px;
+    }
+    .base14px{
+        font-size:14px;
+        line-height:20px;
+    }
+    .base16px{
+        font-size: 16px;
+        line-height:22px;
+    }
+    .base18px{
+        font-size:18px;
+        line-height:24px;
+    }
+
+.em3_5 { font-size: 3.5em; }    /**  @base12px 3.5em = 42px   */
+.em3 { font-size: 3em; }        /**  @base12px 3em = 36px     */
+.em2_5 { font-size: 2.5em; }    /**  @base12px 2.5 = 30px     */ 
+.em2 { font-size: 2em; }         /**  @base12px 2em = 24px    */ 
+.em1_833 { font-size: 1.833em; } /**  @base12px  1.833em = 22px    */
+.em1_75 { font-size: 1.75em; }   /**  @base12px 1.75em = 21px    */
+.em1_667 { font-size: 1.667em; } /**  @base12px 1.667em = 20px    */       
+.em1_5 { font-size: 1.500em }    /**  @base12px 1.5em = 18px      */
+.em1_333 { font-size: 1.333em; } /**  @base12px 1.333em = 16px    */
+.em1_167 { font-size: 1.167em; } /**  @base12px 1.167em = 14px    */
+.em1_083 { font-size: 1.083em; } /**  @base12px 1.083em = 13px    */
+.em1 { font-size: 1em; }         /**  @base12px 1em = 12px       */
+.em0_917{  font-size: 0.917em;}  /**  @base12px 0.917em = 11px   */
+.em0_833{  font-size: 0.833em;}  /**  @base12px 0.833em = 10px   */
+.em0_75 { font-size: 0.75em; }   /**  @base12px 0.75em = 9px     */
+.em0_67{ font-size: 0.667em;  }  /**  @base12px 0.667em = 8px    */
+.em0_5{ font-size:0.5em; }       /**  @base12px 0.5em = 6px      */
+    
+	

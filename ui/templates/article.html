@@ -1,0 +1,17 @@
+<div class="article col-sm-12">
+	<div class="row">
+		<div class="title col-sm-12 text-center sample-1">
+			<h3 class="h3"><%= obj.title %></h3>
+		</div>
+		<% var text_hidden_class = (obj.text.length)? '':'hidden'; %>
+		<% var image_hidden_class = (obj.image && obj.image.length)? '':'hidden'; %>
+		<% var article_width = (obj.image && obj.image.length)? '8':'12'; %>
+		<div class="col-sm-<%= article_width %> <%= text_hidden_class %>">
+			<p><%= obj.text %></p>
+		</div>
+		<% var image_hidden_class = (obj.image && obj.image.length)? '':'hidden'; %>
+		<div class="article-image-wrap col-sm-4 no-border <%= image_hidden_class %> padding-0">
+			<img src="ui/images/<%= obj.image %>.jpg" class="" alt="article picture" />
+		</div>
+	</div>
+</div>
